@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lexend;
+    scroll-behavior: smooth;
+}
+/*------------------- HEADER -------------------*/
+header{
+    width: 100%;
+    background: #292929;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header img{height: 120%;}
+/*------------------- HEADER NAV -------------------*/
+header nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+header nav a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+/*------------------- HEADER ENLACES -------------------*/
+.inicio{color: #AC3B3B;}
+.expo{color: #F28D00;}
+.mapa{color: #2D96B4;}
+.entrada{color: #FDFDB4;}
+.inicio::after{background: #AC3B3B;}
+.expo::after{background: #F28D00;}
+.mapa::after{background: #2D96B4;}
+.entrada::after{background: #FDFDB4;}
+.inicio:hover::after, .expo:hover::after, .mapa:hover::after, .entrada:hover::after{transform: scale(1);}
+
+/*------------------- MAIN -------------------*/
+main{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+/*------------------- IMAGEN DE INICIO -------------------*/
+main .principio{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+main .principio img{width: 100%;}
+/*------------------- CONTENEDOR DE EXPOSITORES -------------------*/
+main .expositor{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background: #F28D00;
+    color: white;
+    text-align: center;
+}
+.titulo{font-size: 40px; padding: 20px;}
+/*------------------- CARTAS DE EXPOSITORES -------------------*/
+.expositor .asis{
+    width: 100%;
+    height: 400px;
+    background-color: #b87f2f;
+    background-size: cover;
+    background-attachment: fixed;
+    align-content: center;
+}
+.asis .contenido{
+    width: 100%;
+    height: 50%;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.asis:hover .contenido{
+    opacity: 1;
+    visibility: visible;
+}
+.contenido p{
+    margin: 0 auto;
+    width: 70%;
+    font-family: Sono;
+}
+.expositor .adi{
+    background-image: url("../img/eadigard.png");
+}
+.expositor .jul{
+    background-image: url("../img/julieb.jpg");
+}
+.expositor .mic{
+    background-image: url("../img/micahel-gabellini.webp");
+}
+.expositor .reb{
+    background-image: url("../img/rmendez.jpg");
+}
+/*------------------- APARTADO DEL MAPA -------------------*/
+.map{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: white;
+    color: #2D96B4;
+    padding: 20px;
+}
+.map .contenedor{
+    width: 100%;
+}
+.map .contenedor img{
+    width: 50%;
+}
+.entradas{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: #c9c98b;
+    color: white;
+    padding: 20px;
+}
+.entradas form{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entradas input{
+    width: 60%;
+    height: 60px;
+    margin: 20px;
+    border: none;
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 20px;
+    color: rgb(41, 41, 41);
+}
+.entradas button{
+    width: 50%;
+    padding: 20px;
+    background: #ffffff;
+    font-size: 20px;
+    border: none;
+    transition: all 0.5s;
+}
+.entradas button:hover{
+    transform: scaleX(1.1);
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background: #292929;
+    padding: 20px;
+    color: white;
+    display: flex;
+}
+footer .left{
+    width: 50%;
+    height: 100%;
+}
+footer .left p{
+    margin-top: 20px;
+}
+footer .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .right ul{
+    list-style: none;
+}
+footer .right ul li{
+    padding: 10px;
+}
+footer .right ul li a{
+    text-decoration: none;
+    color: #F28D00;
+}
